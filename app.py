@@ -14,7 +14,7 @@ headers = {"X-Requested-With":"XMLHttpRequest"}
 #basic return statement for homepage now--this needs to be fixed in the future
 @app.route("/")
 def index():
-	return "index"
+	return "Please query through the url"
 
 #rounting for any questy
 @app.route("/<query>")
