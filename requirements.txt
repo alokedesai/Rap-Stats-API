@@ -4,6 +4,4 @@ Werkzeug==0.8.3
 gunicorn==0.17.2
 requests==1.1.0
 requests-oauthlib==0.3.0
-scikit-learn==0.14-git
-scipy==0.14.0.dev-2a4ba40
 simplejson==2.1.1
