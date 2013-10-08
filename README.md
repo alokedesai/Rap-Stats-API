@@ -16,7 +16,9 @@ Python Example
 		import json
         data = json.load(request) 
 	    for terms in data:
-		    print terms["value"] + ":" + terms["year"]
+	    	print term
+	    	for values in data[terms]:
+		    	print str(values["year"]) + ":" + str(values["terms"])
 
 #### Ouput
 The output is in JSON format, with each term being an array of a certain "year", "value" pair. **Note the value is in percentage format.
