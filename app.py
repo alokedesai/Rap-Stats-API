@@ -1,6 +1,7 @@
 
 from flask import (
-    Flask
+    Flask,
+    Response
 )
 import requests
 import json
@@ -25,10 +26,11 @@ def searchData(query):
 
 	#add items to url
 	for items in newQuery:
-		url = url + items + "%2C+"
+		url = url + items.replace("&" , "+%2B+") + "%2C+"
 
 	#convert to json
 	data =  json.loads(requests.get(url,headers=headers).text)
+
 
 	year = []
 	info = []
@@ -46,7 +48,8 @@ def searchData(query):
 	
 
 	#convert back to json
-	return json.dumps(newData)
+	
+	return Response(response=json.dumps(newData, indent =2), status=200, mimetype='application/json')
 	
 
 
