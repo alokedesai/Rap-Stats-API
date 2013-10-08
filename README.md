@@ -18,6 +18,9 @@ Python Example
 	    for terms in data:
 		    print terms["value"] + ":" + terms["year"]
 
+#### Ouput
+The output is in JSON format, with each term being an array of a certain "year", "value" pair. **Note the value is in percentage format.
+** Here's an example, with the query being east coast, west coast: ['http://rap-stats-api.herokuapp.com/east+coast-west+coast']('http://rap-stats-api.herokuapp.com/east+coast-west+coast')
 #### Multiple Terms
 To query for multiple terms, separate terms with a dash ("-") as in:
 
